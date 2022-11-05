@@ -1,0 +1,22 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+    padding: 15px;
+}
+
+.form__newTask {
+    flex-grow: 10;
+    height: 40px;
+    padding-left: 10px;
+    border: 2px solid rgb(232, 232, 231);
+}
+
+.form__button {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: lighter;
+    margin: 0 5px;
+}

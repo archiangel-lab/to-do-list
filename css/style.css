@@ -9,7 +9,8 @@ html {
 body {
     background-color: rgb(237, 237, 237);
     font-family: 'Montserrat', sans-serif;
-    margin: 40px auto;
+    margin: 10px auto;
+    padding: 20px;
     max-width: 750px;
     word-break: break-word;
 }

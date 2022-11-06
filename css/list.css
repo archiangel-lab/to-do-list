@@ -33,4 +33,5 @@
 .list__button--remove {
     background-color: red;
     text-align: center;
+    margin-left: 10px;
 }

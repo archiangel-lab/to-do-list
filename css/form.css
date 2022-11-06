@@ -5,6 +5,12 @@
     padding: 15px;
 }
 
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
 .form__newTask {
     display: flex;
     align-items: center;
@@ -14,6 +20,14 @@
     border: 2px solid rgb(232, 232, 231);
 }
 
+
+@media (max-width: 767px) {
+    .form__newTask {
+        width: 100%;
+        margin-right: 0px;
+    }
+}
+
 .form__button {
     background-color: teal;
     height: 40px;
@@ -21,4 +35,10 @@
     border: none;
     padding: 10px;
     font-weight: lighter;
+}
+
+@media (max-width: 767px) {
+    .form__button {
+        width: 100%;
+    }
 }

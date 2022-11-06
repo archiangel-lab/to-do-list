@@ -4,6 +4,13 @@
     margin-bottom: 5px;
 }
 
+@media (max-width: 767px) {
+    .section {
+        width: 90%;
+        margin: 0px auto;
+    }
+}
+
 .section_header {
     padding: 15px;
     border-bottom: 2px solid rgb(232, 232, 231);

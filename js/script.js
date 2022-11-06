@@ -42,12 +42,11 @@
 
         for (const task of tasks) {
             htmlString += `
-        <li
-        class="list__item${task.done ? " list__item--done" : ""}"
-        >
-          <button class="list__button--done js-done"></button>
-                    ${task.content}
-                    <button class="list__button--remove js-remove">🗑</button>
+            
+        <li class="list__item : ""}">
+          <button class="list__button list__button--done js-done">${task.done ? "✓" : ""}</button>
+            <p class=" ${task.done ? "list__item--done" : ""}">${task.content}</p>
+          <button class="list__button list__button--remove js-remove">🗑</button>
         </li>
         
         `;

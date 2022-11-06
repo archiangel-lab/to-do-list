@@ -1,4 +1,8 @@
 {
+    const welcome = () => {
+        console.log("Witaj! Zapraszam do sprawdzenie mojej pracy. Dziękuję za wszelkie uwagi i wskazówki :)");
+    }
+
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
@@ -77,6 +81,8 @@
         const form = document.querySelector(".js-form");
 
         form.addEventListener("submit", onFormSubmit);
+
+        welcome();
     };
 
     init();

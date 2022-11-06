@@ -6,17 +6,19 @@
 }
 
 .form__newTask {
-    flex-grow: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
-    padding-left: 10px;
+    padding: 15px;
     border: 2px solid rgb(232, 232, 231);
 }
 
 .form__button {
     background-color: teal;
+    height: 40px;
     color: white;
     border: none;
     padding: 10px;
     font-weight: lighter;
-    margin: 0 5px;
 }

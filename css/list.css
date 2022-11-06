@@ -1,32 +1,36 @@
 .list {
     list-style: none;
     padding: 10px;
-    margin: 10px;
+    margin: 0px;
 }
 
 .list__item {
     border-bottom: 2px solid rgb(232, 232, 231);
     display: grid;
     grid-template-columns: auto 1fr auto;
-    padding: 10px;
-    margin-left: auto;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 15px 0px 15px;
 }
 
 .list__item--done {
     text-decoration: line-through;
 }
 
-.list__button--done {
+.list__button {
+    color: white;
     height: 30px;
     width: 30px;
     border: none;
+}
+
+.list__button--done {
     background-color: green;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .list__button--remove {
-    height: 30px;
-    width: 30px;
-    border: none;
     background-color: red;
-    color: white;
+    text-align: center;
 }

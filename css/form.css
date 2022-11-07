@@ -37,6 +37,11 @@
     font-weight: lighter;
 }
 
+.form__button:hover {
+    background-color: rgb(1, 150, 150);
+    cursor: pointer;
+}  
+
 @media (max-width: 767px) {
     .form__button {
         width: 100%;

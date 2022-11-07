@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
-    padding: 15px;
+    padding: 20px;
 }
 
 @media (max-width: 767px) {
@@ -14,12 +14,10 @@
 .form__newTask {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 40px;
-    padding: 15px;
-    border: 2px solid rgb(232, 232, 231);
+    padding: 10px;
+    border: 1px solid #ddd;
 }
-
 
 @media (max-width: 767px) {
     .form__newTask {
@@ -29,12 +27,11 @@
 }
 
 .form__button {
-    background-color: teal;
+    background: teal;
     height: 40px;
     color: white;
     border: none;
     padding: 10px;
-    font-weight: lighter;
 }
 
 .form__button:hover {

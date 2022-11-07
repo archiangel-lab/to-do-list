@@ -21,6 +21,7 @@
     height: 30px;
     width: 30px;
     border: none;
+    transition: 1s;
 }
 
 .list__button--done {
@@ -49,6 +50,7 @@
     background-color: rgb(187, 2, 2);
     cursor: pointer;
     border: 1px solid black;
+    transform: rotate(180deg);
 }
 
 .list__button--remove:active {

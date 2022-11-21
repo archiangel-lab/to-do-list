@@ -4,7 +4,7 @@
     }
 
     let tasks = [];
-    let hideDoneTasks = false; //zmienna
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -14,18 +14,25 @@
         render();
     };
 
-    const removeTask = (taskIndex) => {  //zmienić na immutability
-        tasks.splice(taskIndex, 1);
+    const removeTask = (taskIndex) => {
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            ...tasks.slice(taskIndex + 1)
+        ];
         render();
-    }
+    };
 
-    const toggleTaskDone = (taskIndex) => { //zmienić na immutability (map)
-        // tasks = tasks.map
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+    const toggleTaskDone = (taskIndex) => {
+        tasks = [
+            ...tasks.slice(0, taskIndex),
+            {
+                ...tasks[taskIndex],
+                done: !tasks[taskIndex].done,
+            },
+            ...tasks.slice(taskIndex + 1),
+        ];
         render();
-    }
-
-    //const funkcja do przełączenia hideDoneTasks (boolean)
+    };
 
     const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -65,7 +72,23 @@
         document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
     };
 
-    const renderButtons = () => { 
+    const renderButtons = () => {
+        //     let htmlRenderButtons = "";
+
+        //     if (tasksListHTMLContent !== "") {
+        //         htmlRenderButtons += `
+        //         <button class= button js-hideDoneTasks>
+        //           ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
+        //         </button>
+
+        //         <button class="button js-completeAll" ${tasks.every(({done}) => done) ? "disabled" : ""}>
+        //          Ukończ wszystkie
+        //         </button>
+        //     `;
+        //     }
+
+        //     document.querySelector(".js-buttons").innerHTML = htmlRenderButtons;
+
         //HTML na podstawie: tasksListHTMLContent i hideDoneTasks, wrzucamy do elementu, w którym przyciski mają się znaleźć
     };
 

@@ -31,13 +31,12 @@
 }
 
 .list__button--done:hover {
-    background-color: rgb(1, 155, 1);
+    background-color: rgb(0, 182, 0);
     cursor: pointer;
-    border: 1px solid black;
 }
 
 .list__button--done:active {
-    background-color: rgb(2, 192, 2);
+    background-color: rgb(0, 92, 0);
 }
 
 .list__button--remove {
@@ -49,7 +48,6 @@
 .list__button--remove:hover {
     background-color: rgb(187, 2, 2);
     cursor: pointer;
-    border: 1px solid black;
     transform: rotate(180deg);
 }
 

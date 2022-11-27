@@ -53,6 +53,11 @@
     border: none;
 }
 
+.container__button:hover {
+    cursor: pointer;
+    color: rgb(29, 179, 179);
+}
+
 @media (max-width: 767px) {
     .container__button {
         width: 100%;

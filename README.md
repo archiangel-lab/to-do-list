@@ -4,7 +4,7 @@
 https://archiangel-lab.github.io/-to-do-list/
 
 ## Preview:
-<img src="https://github.com/archiangel-lab/-to-do-list/blob/main/images/to_do_list.gif" alt="preview">
+<img src="https://archiangel-lab.github.io/to-do-list/" alt="preview">
 
 
 ## Destripction:

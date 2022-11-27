@@ -22,3 +22,40 @@
     list-style: none;
     padding: 15px 0px 0px 0px;
 }
+
+.section__container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    border-bottom: 2px solid rgb(232, 232, 231);
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .section__container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__containerHeader {
+    font-size: 20px;
+    margin: 0;
+}
+
+.container__button {
+    background: none;
+    color: teal;
+    direction: none;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .container__button {
+        width: 100%;
+        margin: 10px auto;
+    }
+}

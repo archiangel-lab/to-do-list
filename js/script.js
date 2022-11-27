@@ -53,10 +53,10 @@
     };
 
     const renderTasks = () => {
-        let tasksListHTMLContent = "";
+        let HTMLContent = "";
 
         for (const task of tasks) {
-            tasksListHTMLContent += `
+            HTMLContent += `
           <li class="list__item">
             <button class="list__button list__button--done js-done">
               ${task.done ? "✓" : ""}
@@ -69,27 +69,25 @@
         `;
         }
 
-        document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
+        document.querySelector(".js-tasks").innerHTML = HTMLContent;
     };
 
     const renderButtons = () => {
-        //     let htmlRenderButtons = "";
+            let HTMLContent = "";
 
-        //     if (tasksListHTMLContent !== "") {
-        //         htmlRenderButtons += `
-        //         <button class= button js-hideDoneTasks>
-        //           ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-        //         </button>
+            if (tasks.length) {
+                HTMLContent = `
+                <button class="container__button js-hideDoneTasks">
+                  ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
+               
+                <button class="container__button js-completeAll" ${tasks.every(({done}) => done) ? "disabled" : ""}>
+                 Ukończ wszystkie
+                </button>
+            `;
+            }
 
-        //         <button class="button js-completeAll" ${tasks.every(({done}) => done) ? "disabled" : ""}>
-        //          Ukończ wszystkie
-        //         </button>
-        //     `;
-        //     }
+            document.querySelector(".js-buttons").innerHTML = HTMLContent;
 
-        //     document.querySelector(".js-buttons").innerHTML = htmlRenderButtons;
-
-        //HTML na podstawie: tasksListHTMLContent i hideDoneTasks, wrzucamy do elementu, w którym przyciski mają się znaleźć
     };
 
     const bindButtonsEvents = () => {

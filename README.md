@@ -1,7 +1,7 @@
 # TO-DO List 📝
 
 ## Demo 🕹️
-[https://archiangel-lab.github.io/-to-do-list/](https://archiangel-lab.github.io/to-do-list/)
+[https://archiangel-lab.github.io/to-do-list/](https://archiangel-lab.github.io/to-do-list/)
 
 ## Preview:
 

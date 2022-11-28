@@ -5,7 +5,7 @@
 
 ## Preview:
 
-
+![gif](https://github.com/archiangel-lab/to-do-list/blob/eb1741ae1e6197a04b889fa38fa8996fc94188ef/images/to_do_list.gif)
 
 ## Destripction:
 TO-DO List is an application for typing tasks, each task is rendered on a separate line with a clickable checkbox.<br>

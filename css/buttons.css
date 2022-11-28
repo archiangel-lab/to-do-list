@@ -1,0 +1,23 @@
+.buttons__button {
+    background: none;
+    color: teal;
+    direction: none;
+    border: none;
+}
+
+.buttons__button:hover {
+    cursor: pointer;
+    color: rgb(29, 179, 179);
+}
+
+@media (max-width: 767px) {
+    .buttons__button {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+.buttons__button--disabled:disabled {
+    color: rgb(186, 186, 186);
+    cursor: default;
+}

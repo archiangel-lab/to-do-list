@@ -90,10 +90,10 @@
 
         if (tasks.length) {
             HTMLContent = `
-                <button class="container__button js-hideDoneTasks">
+                <button class="buttons__button js-hideDoneTasks">
                   ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
                 </button>
-                <button class="container__button js-completeAll" ${tasks.every(({ done }) => done) ? "disabled"
+                <button class="buttons__button buttons__button--disabled js-completeAll" ${tasks.every(({ done }) => done) ? "disabled"
                     : ""}>
                   Ukończ wszystkie
                 </button>
@@ -123,10 +123,8 @@
     const render = () => {
         renderTasks();
         renderButtons();
-
         bindRemoveEvents();
         bindButtonsEvents();
-
     };
 
     const onFormSubmit = (event) => {

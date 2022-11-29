@@ -66,30 +66,32 @@
     };
 
     const renderTasks = () => {
-        let HTMLContent = "";
-
-        for (const task of tasks) {
-            HTMLContent += `
-          <li class="list__item ${task.done && hideDoneTasks ? "list__item--hidden" : ""}">
+        const taskToHTML = task => `
+          <li class="
+            list__item ${task.done && hideDoneTasks ? "list__item--hidden" : ""} js-task">
             <button class="list__button list__button--done js-done">
               ${task.done ? "✓" : ""}
             </button>
-            <p class=" ${task.done ? "list__item--done" : ""}">${task.content}</p>
+            <p class="${task.done ? "list__item--done" : ""}">${task.content}</p>
             <button class="list__button list__button--remove js-remove">
              🗑
             </button>
           </li>
         `;
-        }
 
-        document.querySelector(".js-tasks").innerHTML = HTMLContent;
+        const tasksElement = document.querySelector(".js-tasks");
+        tasksElement.innerHTML = tasks.map(taskToHTML).join("");
     };
 
     const renderButtons = () => {
-        let HTMLContent = "";
+        const buttonsElement = document.querySelector(".js-buttons");
 
-        if (tasks.length) {
-            HTMLContent = `
+        if (!tasks.length) {
+            buttonsElement.innerHTML = "";
+            return;
+        }
+
+         buttonsElement.innerHTML = `
                 <button class="buttons__button js-hideDoneTasks">
                   ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
                 </button>
@@ -98,10 +100,7 @@
                   Ukończ wszystkie
                 </button>
             `;
-        }
-
-        document.querySelector(".js-buttons").innerHTML = HTMLContent;
-    };
+        };
 
     const bindButtonsEvents = () => {
         const hideDoneTasks = document.querySelector(".js-hideDoneTasks");

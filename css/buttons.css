@@ -3,6 +3,7 @@
     color: teal;
     direction: none;
     border: none;
+    margin: 0 0 0 20px;
 }
 
 .buttons__button:hover {
@@ -18,6 +19,6 @@
 }
 
 .buttons__button:disabled {
-    color: rgb(186, 186, 186);
+    color: #ccc;
     cursor: default;
 }

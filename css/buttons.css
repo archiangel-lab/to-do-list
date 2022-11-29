@@ -17,7 +17,7 @@
     }
 }
 
-.buttons__button--disabled:disabled {
+.buttons__button:disabled {
     color: rgb(186, 186, 186);
     cursor: default;
 }
